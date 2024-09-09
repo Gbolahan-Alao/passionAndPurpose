@@ -20,40 +20,34 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/image-5.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          // Form with transparent/blurred background
           Center(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
                 width: MediaQuery.of(context).size.width > 600
                     ? MediaQuery.of(context).size.width * 0.6
-                    : double.infinity, // Adjust width for larger screens
+                    : double.infinity,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: BackdropFilter(
-                    filter:
-                        ImageFilter.blur(sigmaX: 10, sigmaY: 10), // Blur effect
+                    filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                     child: Container(
-                      color: Colors.white
-                          .withOpacity(0.2), // Semi-transparent background
+                      color: Colors.white.withOpacity(0.2),
                       padding: const EdgeInsets.all(20.0),
                       child: SingleChildScrollView(
-                        // Added scroll view
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment
-                              .center, // Align the children to the center
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Text(
                               'Sign Up',
                               style: TextStyle(
@@ -76,29 +70,25 @@ class _SignupScreenState extends State<SignupScreen> {
                                 color: Colors.grey[600],
                               ),
                             ),
-                            SizedBox(height: 30),
-                            // Full Name Field
+                            const SizedBox(height: 30),
                             AuthTextField(
                               hintText: 'Full Name',
                               prefixIcon: Icons.person,
                               fillColor: Colors.white.withOpacity(0.3),
                             ),
-                            SizedBox(height: 20),
-                            // Email Address Field
+                            const SizedBox(height: 20),
                             AuthTextField(
                               hintText: 'Email Address',
                               prefixIcon: Icons.email,
                               fillColor: Colors.white.withOpacity(0.3),
                             ),
-                            SizedBox(height: 20),
-                            // Phone Number Field
+                            const SizedBox(height: 20),
                             AuthTextField(
                               hintText: 'Phone Number',
                               prefixIcon: Icons.phone,
                               fillColor: Colors.white.withOpacity(0.3),
                             ),
-                            SizedBox(height: 20),
-                            // Password Field
+                            const SizedBox(height: 20),
                             AuthTextField(
                               hintText: 'Password',
                               prefixIcon: Icons.lock,
@@ -106,29 +96,25 @@ class _SignupScreenState extends State<SignupScreen> {
                               suffixIcon: Icons.visibility,
                               fillColor: Colors.white.withOpacity(0.3),
                             ),
-                            SizedBox(height: 30),
-                            // Sign Up Button
+                            const SizedBox(height: 30),
                             AuthButton(
                               text: 'Signup',
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (builder) => const MainPage()));
                               },
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                 colors: [
                                   Color(0xFF7F7FD5),
                                   Color(0xFF7F7FD5),
                                 ],
                               ),
                             ),
-                            SizedBox(height: 10),
-                            // Already have an account? Sign In Link
+                            const SizedBox(height: 10),
                             Container(
-                              width: double
-                                  .infinity, // Set the width to the available width of the screen
+                              width: double.infinity,
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment
-                                    .center, // Align the children to the center
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     'Already have an account?',
@@ -147,7 +133,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                         ),
                                       );
                                     },
-                                    child: Text(
+                                    child: const Text(
                                       'Sign In',
                                       style: TextStyle(
                                         fontSize: 12,
