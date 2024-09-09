@@ -1,0 +1,5 @@
+class Config {
+  static const String baseUrl = 'https://localhost:7062/api';
+  static const String apiToken =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTRjOGRiMC1hZDY1LTQ4MDktODQ0NS05ZWM4ZWVmM2UwOWQiLCJqdGkiOiJkNTdjYTE0Mi1lYjIxLTQwZTMtYjcxNi01OThjNDAxNmFjMzAiLCJ1bmlxdWVfbmFtZSI6ImFsYW9nYm9sYWhhbkBnbWFpbC5jb20iLCJlbWFpbCI6ImFsYW9nYm9sYWhhbkBnbWFpbC5jb20iLCJuYmYiOjE3MjU3NzU1NDMsImV4cCI6MTcyNTgxMTU0MywiaWF0IjoxNzI1Nzc1NTQzLCJpc3MiOiJ5b3VyX2lzc3VlciIsImF1ZCI6InlvdXJfYXVkaWVuY2UifQ.GdFqixoZU6QQ9FLnGv0a6a9CZJZQ3arNvNerOZtGP68';
+}
