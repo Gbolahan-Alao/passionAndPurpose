@@ -38,13 +38,13 @@ class LoginPage extends StatelessWidget {
                     child: BackdropFilter(
                       filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                       child: Container(
-                        color: Colors.white.withOpacity(0.2),
+                        color: Colors.white.withOpacity(0.35),
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Text(
                               'Login',
                               style: TextStyle(
@@ -105,6 +105,7 @@ class LoginPage extends StatelessWidget {
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: 16,
+                                      fontWeight: FontWeight.w600,
                                       color: Colors.grey[600],
                                     ),
                                   ),

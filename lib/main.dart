@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:passion_purpose/core/theme/theme.dart';
 import 'package:passion_purpose/features/auth/presentation/pages/auth_screen.dart';
 

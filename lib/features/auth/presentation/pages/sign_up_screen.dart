@@ -40,7 +40,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                     child: Container(
-                      color: Colors.white.withOpacity(0.2),
+                      color: Colors.white.withOpacity(0.3),
                       padding: const EdgeInsets.all(20.0),
                       child: SingleChildScrollView(
                         child: Column(
@@ -63,6 +63,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             Text(
                               'Create an account to start exploring.',
                               style: TextStyle(
+                                fontWeight: FontWeight.w600,
                                 fontSize:
                                     MediaQuery.of(context).size.width > 600
                                         ? 18
@@ -119,7 +120,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                   Text(
                                     'Already have an account?',
                                     style: TextStyle(
-                                      fontSize: 12,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
                                       color: Colors.grey[600],
                                     ),
                                   ),
@@ -136,7 +138,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                     child: const Text(
                                       'Sign In',
                                       style: TextStyle(
-                                        fontSize: 12,
+                                        fontSize: 16,
                                         color: AppTheme.primaryColor,
                                       ),
                                     ),
