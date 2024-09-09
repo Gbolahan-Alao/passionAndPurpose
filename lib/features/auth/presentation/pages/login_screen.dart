@@ -18,32 +18,27 @@ class LoginPage extends StatelessWidget {
       home: Scaffold(
         body: Stack(
           children: [
-            // Background Image
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                      'assets/images/image-5.jpg'), // Your image path
+                  image: AssetImage('assets/images/image-5.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            // Form with transparent/blurred background
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width > 600
                       ? MediaQuery.of(context).size.width * 0.6
-                      : double.infinity, // Adjust width for larger screens
+                      : double.infinity,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: BackdropFilter(
-                      filter: ImageFilter.blur(
-                          sigmaX: 10, sigmaY: 10), // Blur effect
+                      filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                       child: Container(
-                        color: Colors.white
-                            .withOpacity(0.2), // Semi-transparent background
+                        color: Colors.white.withOpacity(0.2),
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,15 +68,12 @@ class LoginPage extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 30),
-                            // Username Field
                             AuthTextField(
                               hintText: 'Username',
                               prefixIcon: Icons.person,
-                              fillColor: Colors.white
-                                  .withOpacity(0.3), // Slightly more opaque
+                              fillColor: Colors.white.withOpacity(0.3),
                             ),
                             SizedBox(height: 20),
-                            // Password Field
                             AuthTextField(
                               hintText: 'Password',
                               prefixIcon: Icons.lock,
@@ -90,22 +82,20 @@ class LoginPage extends StatelessWidget {
                               fillColor: Colors.white.withOpacity(0.3),
                             ),
                             SizedBox(height: 30),
-                            // Login Button
                             AuthButton(
                               text: 'Login',
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                     builder: (builder) => const MainPage()));
                               },
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                 colors: [
                                   Color(0xFF7F7FD5),
                                   Color(0xFF7F7FD5),
                                 ],
                               ),
                             ),
-                            SizedBox(height: 20),
-                            // Don't have an account? Sign Up Link
+                            const SizedBox(height: 20),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -119,7 +109,7 @@ class LoginPage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                SizedBox(width: 2),
+                                const SizedBox(width: 2),
                                 TextButton(
                                   onPressed: () {
                                     Navigator.of(context).push(
@@ -127,7 +117,7 @@ class LoginPage extends StatelessWidget {
                                             builder: (context) =>
                                                 SignupScreen()));
                                   },
-                                  child: Text(
+                                  child: const Text(
                                     'Sign Up',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
